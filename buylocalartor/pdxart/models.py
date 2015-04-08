@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User, UserManager
-
+# TODO: MAKEMIGRATE!
 class Medium(models.Model):
     material = models.CharField(max_length=128, unique=True)
     def __unicode__(self):
@@ -8,11 +8,11 @@ class Medium(models.Model):
 
 #TODO: Ask for easier model
 class Address(models.Model):
-    state = models.CharField('Oregon')
-    house_number = models.IntegerField(blank=True)
-    street_name = models.CharField(blank=True)
-    apartment_or_pobox = models.CharField(blank=True)
-    compass = models.CharField(blank=True)
+    state = models.CharField(max_length=128, default='Oregon')
+    house_number = models.IntegerField(max_length=128, default=0)
+    street_name = models.CharField(max_length=128, default=0)
+    apartment_or_pobox = models.CharField(max_length=128, default=0)
+    compass = models.CharField(max_length=128, default=0)
 
 class UserProfile(User):
     user = models.OneToOneField(User)
@@ -35,7 +35,3 @@ class Product(models.Model):
     updated = models.DateTimeField(null=True)
     def __unicode__(self):  #For Python 2, use __str__ on Python 3
         return self.name
-
-
-
-
