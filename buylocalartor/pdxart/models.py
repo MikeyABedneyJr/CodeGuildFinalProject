@@ -22,7 +22,7 @@ class UserProfile(User):
     twitter = models.URLField(blank=True)
     LinkedIn = models.URLField(blank=True)
     bio = models.TextField(max_length=500)
-    address = models.ForeignKey(Address)
+    address = models.ForeignKey(Address, blank=True)
 
 
 class Product(models.Model):
