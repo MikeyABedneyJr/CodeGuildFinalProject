@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User, UserManager
-# TODO: MAKEMIGRATE!
+
 class Medium(models.Model):
     material = models.CharField(max_length=128, unique=True)
     def __unicode__(self):
@@ -13,6 +13,8 @@ class Address(models.Model):
     street_name = models.CharField(max_length=128, default=0)
     apartment_or_pobox = models.CharField(max_length=128, default=0)
     compass = models.CharField(max_length=128, default=0)
+    def __unicode__(self):
+        return self.house_number
 
 class UserProfile(User):
     user = models.OneToOneField(User)
@@ -23,7 +25,8 @@ class UserProfile(User):
     LinkedIn = models.URLField(blank=True)
     bio = models.TextField(max_length=500)
     address = models.ForeignKey(Address, blank=True)
-
+    def __unicode__(self):
+        return self.user
 
 class Product(models.Model):
     name = models.CharField(max_length=128)

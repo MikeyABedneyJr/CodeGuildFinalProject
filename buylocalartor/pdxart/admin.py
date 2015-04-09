@@ -1,3 +1,8 @@
 from django.contrib import admin
+from pdxart.models import Medium, UserProfile
 
-# Register your models here.
+# class MediumAdmin(admin.ModelAdmin):
+#     list_display = ('material')
+
+admin.site.register(Medium)
+admin.site.register(UserProfile)
