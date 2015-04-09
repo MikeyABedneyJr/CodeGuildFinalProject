@@ -6,15 +6,12 @@ class Medium(models.Model):
     def __unicode__(self):
         return self.material
 
-#TODO: Ask for easier model
 class Address(models.Model):
     state = models.CharField(max_length=128, default='Oregon')
-    house_number = models.IntegerField(max_length=128, default=0)
-    street_name = models.CharField(max_length=128, default=0)
-    apartment_or_pobox = models.CharField(max_length=128, default=0)
-    compass = models.CharField(max_length=128, default=0)
+    street_address = models.CharField(max_length=128, blank=True)
+    city = models.CharField(max_length=128, blank=True)
     def __unicode__(self):
-        return self.house_number
+        return self.street_address
 
 class UserProfile(User):
     user = models.OneToOneField(User)
