@@ -8,5 +8,15 @@
 <body>
     <h1>This will be a kickass index page!!</h1>
     <img src="/static/images/logo.jpg" alt="Picture of logo" />
+
+    {% if products %}
+        <ul>
+            {% for product in products %}
+                <li>{{ product.name }}</li>
+                {% endfor %}
+        </ul>
+        {% else %}
+        <strong>There are no products present.</strong>
+        {% endif %}
 </body>
 </html>
