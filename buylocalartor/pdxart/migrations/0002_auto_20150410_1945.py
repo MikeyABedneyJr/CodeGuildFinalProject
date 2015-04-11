@@ -7,14 +7,14 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('pdxart', '0002_auto_20150408_1748'),
+        ('pdxart', '0001_initial'),
     ]
 
     operations = [
         migrations.AlterField(
             model_name='userprofile',
             name='address',
-            field=models.ForeignKey(to='pdxart.Address', blank=True),
+            field=models.OneToOneField(null=True, blank=True, to='pdxart.Address'),
             preserve_default=True,
         ),
     ]

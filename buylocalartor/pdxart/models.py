@@ -4,26 +4,26 @@ from django.contrib.auth.models import User, UserManager
 class Medium(models.Model):
     material = models.CharField(max_length=128, unique=True)
     def __unicode__(self):
-        return self.material
+        return str(self.material)
 
 class Address(models.Model):
     state = models.CharField(max_length=128, default='Oregon')
     street_address = models.CharField(max_length=128, blank=True)
     city = models.CharField(max_length=128, blank=True)
     def __unicode__(self):
-        return self.street_address
+        return str(self.street_address)
 
-class UserProfile(User):
+class UserProfile(models.Model):
     user = models.OneToOneField(User)
     picture = models.ImageField(upload_to='profile_images', blank=True)
     website = models.URLField(blank=True)
     facebook = models.URLField(blank=True)
     twitter = models.URLField(blank=True)
     LinkedIn = models.URLField(blank=True)
-    bio = models.TextField(max_length=500)
-    address = models.ForeignKey(Address, blank=True)
+    bio = models.TextField(max_length=500, blank=True)
+    address = models.OneToOneField(Address, blank=True, null=True)
     def __unicode__(self):
-        return self.user
+        return str(self.user)
 
 class Product(models.Model):
     name = models.CharField(max_length=128)
@@ -34,4 +34,4 @@ class Product(models.Model):
     time_sold = models.DateTimeField(null=True)
     updated = models.DateTimeField(null=True)
     def __unicode__(self):  #For Python 2, use __str__ on Python 3
-        return self.name
+        return str(self.name)
