@@ -30,8 +30,10 @@ class Product(models.Model):
     price = models.PositiveIntegerField(default=0)
     medium = models.ForeignKey(Medium)
     owner = models.ForeignKey(UserProfile)
+    views = models.PositiveIntegerField(default=0)
+    likes = models.PositiveIntegerField(default=0)
     description = models.TextField(max_length=500)
-    time_sold = models.DateTimeField(null=True)
+    time_sold = models.DateTimeField(blank=True, null=True)
     updated = models.DateTimeField(null=True)
     def __unicode__(self):  #For Python 2, use __str__ on Python 3
         return str(self.name)
