@@ -12,3 +12,7 @@ def index(request):
     # Render the response and send it back!
     return render(request, 'pdxart/index.html', context_dict)
 
+
+def registration(request):
+    return render(request, 'pdxart/registration.html')
+
