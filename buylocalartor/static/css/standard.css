@@ -3,6 +3,10 @@ img {
     width: 150px;
 }
 
+.nav_tags{
+    background-color: #E6E6E6;
+}
+
 body {
-    background-color: #DBFFDB;
+    background-color: white;
 }

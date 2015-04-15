@@ -26,7 +26,7 @@ class UserProfile(models.Model):
     bio = models.TextField(max_length=500, blank=True)
     address = models.OneToOneField(Address, blank=True, null=True)
     def __unicode__(self):
-        return str(self.user)
+        return str(self.user.username)
 
 class Product(models.Model):
     name = models.CharField(max_length=128)
