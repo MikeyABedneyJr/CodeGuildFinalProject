@@ -16,12 +16,11 @@ def index(request):
 
 def registration(request):
     if request.POST:
-        print request.POST
-        picture = request.POST['image_upload']
-        user = User.objects.create_user(picture)
+        # picture = request.POST['image_upload']
+        user = User.objects.create_user()
         user.save()
         profile = UserProfile()
-        profile.picture = picture #TODO: Fix profile pic--prob not gonna work
+        # profile.picture = picture #TODO: Fix profile pic--prob not gonna work
         profile.date = date
         profile.facebook = facebook
         profile.twitter = twitter
