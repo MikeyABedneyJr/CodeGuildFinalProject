@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from pdxart.models import Product
+from pdxart.models import Product, User, UserProfile
+
 
 def index(request):
     # Query the database for a list of ALL products currently stored.
@@ -14,5 +15,19 @@ def index(request):
 
 
 def registration(request):
+    if request.POST:
+        print request.POST
+        picture = request.POST['image_upload']
+        user = User.objects.create_user(picture)
+        user.save()
+        profile = UserProfile()
+        profile.picture = picture #TODO: Fix profile pic--prob not gonna work
+        profile.date = date
+        profile.facebook = facebook
+        profile.twitter = twitter
+        profile.linkedin = linkedin
+        profile.address = address #TODO: How to verify address in Oregon?
+        profile.bio = bio
+        profile.save()
+        return redirect('pdxart/index.html')
     return render(request, 'pdxart/registration.html')
-

@@ -12,13 +12,24 @@
     <div id="login_box">
       <form method="post" id="registration">
         <div id="errors" style="color: red;"></div>
+
+{#TODO: Add profile picture#}
+
         Username:    <input value="" name="username" id="username"><br>         
         Password: <input type="password" name="password" id="password"><br>
         Verify password: <input type="password" name="verify_password" id="verify_password"><br>
         Email: <input type="email" name="email" id="email"><br>
-        Date of birth: <input type="date" name="dob" id="dob">
+        Date of birth: <input type="date" name="dob" id="dob"><br>
+        Website: <input value="" name="website" id="website"><br>
+        Facebook: <input value="" name="facebook" id="facebook"><br>
+        Twitter: <input value="" name="twitter" id="twitter"><br>
+        LinkedIn: <input value="" name="linkedin" id="linkedin"><br>
+        Street address: <input value="" name="address" id="address"><br>
+        Tell us about yourself: <input value="" name="bio" id="bio"><br>
       </form>
     <p>
+
+{#TODO: How should I store this in the database? Add it to the form?#}
         How did you hear about us?
         <select size="1">
             <option>Friend/Family member</option>
