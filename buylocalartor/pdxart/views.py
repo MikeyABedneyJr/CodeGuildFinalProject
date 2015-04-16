@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from pdxart.models import Product, User, UserProfile
+from django.http import HttpResponse, HttpResponseRedirect
 
 
 def index(request):
@@ -22,16 +23,21 @@ def registration(request):
         lastname = request.POST['lastname']
         email = request.POST['email']
         # picture = request.POST['image_upload']
-        user = User.objects.create_user(username=username, password=password, firstname=firstname, lastname=lastname, email=email)
+        user = User.objects.create_user(username=username, password=password, first_name=firstname, last_name=lastname, email=email)
         user.save()
         profile = UserProfile()
+        u = User.objects.get(username=username)
+        profile.user = u
         # profile.picture = picture #TODO: Fix profile pic--prob not gonna work
         profile.date = request.POST['dob']
-        profile.facebook = facebook
-        profile.twitter = twitter
-        profile.linkedin = linkedin
-        profile.address = address #TODO: How to verify address in Oregon?
-        profile.bio = bio
+        profile.website = request.POST['website']
+        profile.facebook = request.POST['facebook']
+        profile.twitter = request.POST['twitter']
+        profile.linkedin = request.POST['linkedin']
+        # profile.address = request.POST['address']
+            # TODO: How to verify address in Oregon?
+            # TODO: Add gender
+        profile.bio = request.POST['bio']
         profile.save()
-        return redirect('pdxart/index.html')
+        return HttpResponseRedirect('/pdxart/index/')
     return render(request, 'pdxart/registration.html')

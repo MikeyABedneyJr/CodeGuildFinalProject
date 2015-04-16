@@ -25,6 +25,7 @@ class UserProfile(models.Model):
     linkedin = models.URLField(blank=True)
     bio = models.TextField(max_length=500, blank=True)
     address = models.OneToOneField(Address, blank=True, null=True)
+    gender = models.CharField(max_length=1, blank=True)
     def __unicode__(self):
         return str(self.user.username)
 
