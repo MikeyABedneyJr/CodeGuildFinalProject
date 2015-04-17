@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User, UserManager
+from imagekit.models import ImageSpecField
+from imagekit.processors import ResizeToFill
 
 class Medium(models.Model):
     class Meta:
@@ -18,7 +20,10 @@ class Address(models.Model):
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User)
-    picture = models.ImageField(upload_to='profile_images', blank=True)
+    picture = models.ImageField(upload_to='/media/profile_images', blank=True)
+    picture_thumbnail = ImageSpecField(source='picture', processors=[ResizeToFill(100, 50)],
+                                      format='PNG',
+                                      options={'quality': 60})
     website = models.URLField(blank=True)
     facebook = models.URLField(blank=True)
     twitter = models.URLField(blank=True)
@@ -26,6 +31,11 @@ class UserProfile(models.Model):
     bio = models.TextField(max_length=500, blank=True)
     address = models.OneToOneField(Address, blank=True, null=True)
     gender = models.CharField(max_length=1, blank=True)
+    # def avatar_image(self):
+    #     if has image:
+    #         return ('/media/profile_images/' + self + '.png')
+    #     else:
+    #         return ('/media/profile_images/default_profile_pic.jpg'')
     def __unicode__(self):
         return str(self.user.username)
 
