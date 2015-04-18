@@ -18,12 +18,16 @@ class Address(models.Model):
     def __unicode__(self):
         return str(self.street_address)
 
-class UserProfile(models.Model):
-    user = models.OneToOneField(User)
-    picture = models.ImageField(upload_to='/media/profile_images', blank=True)
-    picture_thumbnail = ImageSpecField(source='picture', processors=[ResizeToFill(100, 50)],
+class Profilepic(models.Model):
+    avatar = models.ImageField(upload_to='/media/profile_images')
+    avatar_thumbnail = ImageSpecField(source='/media/profile_images',
+                                      processors=[ResizeToFill(100, 50)],
                                       format='PNG',
                                       options={'quality': 60})
+
+class UserProfile(models.Model):
+    user = models.OneToOneField(User)
+    avatar = models.OneToOneField(Profilepic, blank=True, null=True)
     website = models.URLField(blank=True)
     facebook = models.URLField(blank=True)
     twitter = models.URLField(blank=True)
