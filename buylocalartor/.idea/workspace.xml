@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b424081-e4a7-47fa-a0f5-df38bd7e4b8f" name="Default" comment="Last push of the night">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdxart/migrations/0011_auto_20150420_2000.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/pdxart/updateprofile.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/pdxart/profile.html" />
       <change type="DELETED" beforePath="C:\Users\mike.bedney\Desktop\Dropbox\GitHub\CodeGuildFinalProject\.idea\.name" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\mike.bedney\Desktop\Dropbox\GitHub\CodeGuildFinalProject\.idea\CodeGuildFinalProject.iml" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\mike.bedney\Desktop\Dropbox\GitHub\CodeGuildFinalProject\.idea\encodings.xml" afterPath="" />
@@ -14,11 +11,12 @@
       <change type="DELETED" beforePath="C:\Users\mike.bedney\Desktop\Dropbox\GitHub\CodeGuildFinalProject\.idea\scopes\scope_settings.xml" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\mike.bedney\Desktop\Dropbox\GitHub\CodeGuildFinalProject\.idea\vcs.xml" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\mike.bedney\Desktop\Dropbox\GitHub\CodeGuildFinalProject\.idea\workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\mike.bedney\Desktop\Dropbox\GitHub\CodeGuildFinalProject\buylocalartor\templates\pdxart\profile.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\mike.bedney\Desktop\Dropbox\GitHub\CodeGuildFinalProject\buylocalartor\populate_pdxart.py" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\mike.bedney\Desktop\Dropbox\GitHub\CodeGuildFinalProject\models.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pdxart/models.py" afterPath="$PROJECT_DIR$/pdxart/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/pdxart/registration.html" afterPath="$PROJECT_DIR$/templates/pdxart/registration.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/pdxart/updateprofile.html" afterPath="$PROJECT_DIR$/templates/pdxart/updateprofile.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pdxart/urls.py" afterPath="$PROJECT_DIR$/pdxart/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pdxart/views.py" afterPath="$PROJECT_DIR$/pdxart/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -64,8 +62,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pdxart/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.275862" vertical-offset="496" max-vertical-offset="1190">
-              <caret line="45" column="11" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1292">
+              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -73,11 +71,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="updateprofile.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="profile.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/pdxart/profile.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="255">
+              <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="updateprofile.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/pdxart/updateprofile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.8846154" vertical-offset="178" max-vertical-offset="561">
-              <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.38263667" vertical-offset="0" max-vertical-offset="561">
+              <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -86,18 +94,8 @@
       <file leaf-file-name="registration.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/pdxart/registration.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.8727273" vertical-offset="33" max-vertical-offset="901">
-              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pdxart/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3489736" vertical-offset="0" max-vertical-offset="341">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state vertical-scroll-proportion="-3.1090908" vertical-offset="611" max-vertical-offset="969">
+              <caret line="46" column="12" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -122,12 +120,12 @@
         <option value="$PROJECT_DIR$/buylocalartor/settings.py" />
         <option value="$PROJECT_DIR$/pdxart/notes.html" />
         <option value="$PROJECT_DIR$/pdxart/admin.py" />
-        <option value="$PROJECT_DIR$/templates/pdxart/profile.html" />
-        <option value="$PROJECT_DIR$/templates/pdxart/updateprofile.html" />
         <option value="$PROJECT_DIR$/pdxart/models.py" />
-        <option value="$PROJECT_DIR$/pdxart/views.py" />
         <option value="$PROJECT_DIR$/templates/pdxart/registration.html" />
+        <option value="$PROJECT_DIR$/templates/pdxart/profile.html" />
         <option value="$PROJECT_DIR$/pdxart/urls.py" />
+        <option value="$PROJECT_DIR$/pdxart/views.py" />
+        <option value="$PROJECT_DIR$/templates/pdxart/updateprofile.html" />
       </list>
     </option>
   </component>
@@ -135,10 +133,9 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="258" />
-    <option name="y" value="1" />
-    <option name="width" value="766" />
-    <option name="height" value="559" />
+    <option name="x" value="392" />
+    <option name="width" value="632" />
+    <option name="height" value="560" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -695,7 +692,13 @@
       <option name="project" value="LOCAL" />
       <updated>1429580079606</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Registration working---working on update page">
+      <created>1429586175805</created>
+      <option name="number" value="00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1429586175805</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -719,7 +722,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="258" y="1" width="766" height="559" extended-state="0" />
+    <frame x="392" y="0" width="632" height="560" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32984293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -730,7 +733,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32722512" sideWeight="0.78962535" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26628897" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26573426" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32754344" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -776,10 +779,13 @@
     <MESSAGE value="Lots to do so this is the only push---adding profile pics" />
     <MESSAGE value="One push to rule them allllllll" />
     <MESSAGE value="Breaking up user registration &amp; update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Breaking up user registration &amp; update" />
+    <MESSAGE value="Registration working---working on update page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Registration working---working on update page" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -841,13 +847,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/populate_pdxart.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="986">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pdxart/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="187">
@@ -869,13 +868,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="221">
           <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/populate_pdxart.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1241">
-          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -997,13 +989,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/populate_pdxart.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="986">
-          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.09392265" vertical-offset="0" max-vertical-offset="362">
@@ -1090,14 +1075,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/pdxart/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21935484" vertical-offset="0" max-vertical-offset="510">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pdxart/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.48710603" vertical-offset="0" max-vertical-offset="349">
@@ -1135,18 +1112,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pdxart/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="392" max-vertical-offset="1054">
-          <caret line="36" column="54" selection-start-line="36" selection-start-column="54" selection-end-line="36" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="1088">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pdxart/registration.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.1090908" vertical-offset="611" max-vertical-offset="969">
+          <caret line="46" column="12" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pdxart/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35311574" vertical-offset="0" max-vertical-offset="337">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pdxart/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="510">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pdxart/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="255">
+          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pdxart/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.275862" vertical-offset="496" max-vertical-offset="1190">
-          <caret line="45" column="11" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="870" max-vertical-offset="1292">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
@@ -1155,24 +1164,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/pdxart/updateprofile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.8846154" vertical-offset="178" max-vertical-offset="561">
-          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/pdxart/registration.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.8727273" vertical-offset="33" max-vertical-offset="901">
-          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pdxart/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3489736" vertical-offset="0" max-vertical-offset="341">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.38263667" vertical-offset="0" max-vertical-offset="561">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
           <folding />
         </state>
       </provider>

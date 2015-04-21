@@ -5,16 +5,16 @@
     <title>Profile Edit</title>
 </head>
 <body>
+{# TODO: Create an id, go to update it, have the fields prepopulated#}
 <fieldset>
     <legend>Your Profile</legend>
       <form method="POST" id="update">
       {% csrf_token %}
         First Name:<input value="" name="firstname" id="firstname"><br>
         Last Name:<input value="" name="lastname" id="lastname"><br>
-        Username: <input value="" name="username" id="username"><br>
+        Business name: <input value="" name="username" id="username"><br>
 {#        Profile Picture: <img src="{{ item.avatar_image_url }}" alt="profile pic"/><br>#}
         Password: <input type="password" name="password" id="password"><br>
-        Verify password: <input type="password" name="verify_password" id="verify_password"><br>
         Email: <input type="email" name="email" id="email"><br>
         Website: <input type="" name="website" id="website"><br>
         Facebook: <input type="" name="facebook" id="facebook"><br>

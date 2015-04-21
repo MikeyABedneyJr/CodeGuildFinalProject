@@ -3,6 +3,7 @@ from django.contrib.auth.models import User, UserManager
 from imagekit.models import ImageSpecField
 from imagekit.processors import ResizeToFill
 
+
 class Medium(models.Model):
     class Meta:
         verbose_name_plural = "Media"
@@ -42,6 +43,7 @@ class UserProfile(models.Model):
     #         return ('/media/profile_images/default_profile_pic.jpg'')
     def __unicode__(self):
         return str(self.user.username)
+
 
 class Product(models.Model):
     name = models.CharField(max_length=128)
