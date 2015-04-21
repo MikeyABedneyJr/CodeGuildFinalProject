@@ -28,11 +28,11 @@ class Profilepic(models.Model):
 class UserProfile(models.Model):
     user = models.OneToOneField(User)
     avatar = models.OneToOneField(Profilepic, blank=True, null=True)
-    website = models.URLField(blank=True)
-    facebook = models.URLField(blank=True)
-    twitter = models.URLField(blank=True)
-    linkedin = models.URLField(blank=True)
-    bio = models.TextField(max_length=500, blank=True)
+    website = models.URLField(blank=True, null=True)
+    facebook = models.URLField(blank=True, null=True)
+    twitter = models.URLField(blank=True, null=True)
+    linkedin = models.URLField(blank=True, null=True)
+    bio = models.TextField(max_length=500, blank=True, null=True)
     address = models.OneToOneField(Address, blank=True, null=True)
     gender = models.CharField(max_length=1, blank=True)
     # def avatar_image(self):

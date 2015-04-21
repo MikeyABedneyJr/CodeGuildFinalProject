@@ -4,4 +4,5 @@ from pdxart import views
 urlpatterns = patterns('',
         url(r'^index/', views.index, name='index'),
         url(r'^registration/', views.registration, name='registration'),
+        url(r'^updateprofile/', views.update_profile, name='updateprofile'),
         )

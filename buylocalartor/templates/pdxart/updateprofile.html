@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Profile Edit</title>
+</head>
+<body>
+<fieldset>
+    <legend>Your Profile</legend>
+      <form method="POST" id="update">
+      {% csrf_token %}
+        First Name:<input value="" name="firstname" id="firstname"><br>
+        Last Name:<input value="" name="lastname" id="lastname"><br>
+        Username: <input value="" name="username" id="username"><br>
+{#        Profile Picture: <img src="{{ item.avatar_image_url }}" alt="profile pic"/><br>#}
+        Password: <input type="password" name="password" id="password"><br>
+        Verify password: <input type="password" name="verify_password" id="verify_password"><br>
+        Email: <input type="email" name="email" id="email"><br>
+        Website: <input type="" name="website" id="website"><br>
+        Facebook: <input type="" name="facebook" id="facebook"><br>
+        Twitter: <input type="" name="twitter" id="twitter"><br>
+        LinkedIn: <input type="" name="linkedin" id="linkedin"><br>
+        Why do you like art?: <input type="" name="bio" id="bio"><br>
+      <input type="submit" value="Register">
+    </form>
+    </fieldset>
+</body>
+</html>
