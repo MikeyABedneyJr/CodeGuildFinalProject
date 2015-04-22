@@ -1,9 +1,14 @@
 {% extends "pdxart/base.html" %}
 
 {% block content %}
-
-    <a href="registration.html">Register</a><br>
-<a href="updateprofile.html">Update Profile</a><br>
+    {% if user.is_authenticated %}
+    <h1>Welcome back {{ user.username }}!</h1>
+{% else %}
+<h1>Welcome Art-Supporter!</h1>
+{% endif %}
+    <a href="{% url 'login' %}">Login</a><br>
+    <a href="{% url 'registration' %}">Register</a><br>
+    <a href="{% url 'updateprofile' %}">Update Profile</a><br>
 
 {% endblock %}
 {#<!DOCTYPE html>#}
