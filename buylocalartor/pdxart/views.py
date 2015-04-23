@@ -4,6 +4,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 
+#TODO: Add logout feature
 def index(request):
     # Query the database for a list of ALL products currently stored.
     # Order the products by no. likes in descending order.
@@ -34,7 +35,13 @@ def registration(request):
         # profile.date = request.POST['dob']
             # TODO: How to verify address in Oregon?
         profile.save()
-        return HttpResponseRedirect('/pdxart/index/')
+        new_member = authenticate(username=username, password=password)
+
+
+        if new_member:
+            login(request, new_member)
+            return HttpResponseRedirect('/pdxart/')
+        return HttpResponseRedirect('/pdxart/')
     return render(request, 'pdxart/registration.html')
 
 
@@ -104,6 +111,7 @@ def profile(request):
 def update_profile(request):
     user = User.objects.get(username=request.user)
     profile = UserProfile.objects.filter(user=request.user)[0]
+    # TODO: Make dictionary with user info (keyword pairs) and move into fields
     if request.POST:
         user.email = request.POST.get('email')
         user.firstname = request.POST.get('firstname')
@@ -117,7 +125,5 @@ def update_profile(request):
         # profile.date = request.POST['dob']
         profile.bio = request.POST.get('bio')
         profile.save()
-
-        return HttpResponseRedirect('/pdxart/index/')
-
+        return HttpResponseRedirect('/pdxart/')
     return render(request, 'pdxart/updateprofile.html', {'email': user, 'profile': profile})
