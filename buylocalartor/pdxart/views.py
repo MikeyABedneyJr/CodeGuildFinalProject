@@ -4,7 +4,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 
-#TODO: Add logout feature
+
 def index(request):
     # Query the database for a list of ALL products currently stored.
     # Order the products by no. likes in descending order.
@@ -46,7 +46,6 @@ def registration(request):
 
 
 def user_login(request):
-
     # If the request is a HTTP POST, try to pull out the relevant information.
     if request.method == 'POST':
         # Gather the username and password provided by the user.
@@ -127,3 +126,15 @@ def update_profile(request):
         profile.save()
         return HttpResponseRedirect('/pdxart/')
     return render(request, 'pdxart/updateprofile.html', {'email': user, 'profile': profile})
+
+
+# Viewing personal inventory page --------------------------------------------------------------------------------------------------------------------
+@login_required
+def inventory(request):
+    # Create a context dictionary which we can pass to the template rendering engine.
+    context_dict = {}
+    products = Product.objects.all()
+    context_dict['products'] = products
+
+    # Go render the response and return it to the client.
+    return render(request, 'pdxart/inventory.html', context_dict)

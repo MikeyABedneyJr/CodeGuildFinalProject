@@ -2,7 +2,7 @@
 
 {% block content %}
     {% if user.is_authenticated %}
-        <h1>Welcome back {{ user.username }}!</h1>
+        <h1>Welcome back!</h1>
         <a href="/pdxart/logout/">Logout</a><br />
         <a href="{% url 'updateprofile' %}">Update Profile</a><br>
 
