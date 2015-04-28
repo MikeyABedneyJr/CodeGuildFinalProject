@@ -132,9 +132,9 @@ def update_profile(request):
 @login_required
 def inventory(request):
     # Create a context dictionary which we can pass to the template rendering engine.
-    context_dict = {}
+
     products = Product.objects.all()
-    context_dict['products'] = products
+    context_dict = {'products': products}
 
     # Go render the response and return it to the client.
     return render(request, 'pdxart/inventory.html', context_dict)

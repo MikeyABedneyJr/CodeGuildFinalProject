@@ -5,17 +5,19 @@
     <title>Inventory</title>
 </head>
 <body>
-<h1>{{ category_name }}</h1>
-    {% if inventory %}
-    <ul>
-        {% for products in product %}
-{#    TODO: Make sure products have .description  | Rdy debug skills :-)#}
-            <li><a href="/products/{{ product.id }}">{{ product.description }}</a></li>
-        {% endfor %}
-    </ul>
+
+    {% if products %}
+        <h1>Here are the items you currently have listed</h1>
+        <ul>
+            {% for product in products %}
+                <li>{{ product.name }} - {{ product.description }}</a></li>
+            {% endfor %}
+        </ul>
     {% else %}
         <strong>No items have been uploaded to your store.</strong>
     {% endif %}
 
+    <br><br>
+    <a href="/pdxart/">Back to homepage</a><br>
 </body>
 </html>
