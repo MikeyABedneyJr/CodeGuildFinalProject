@@ -138,3 +138,15 @@ def inventory(request):
 
     # Go render the response and return it to the client.
     return render(request, 'pdxart/inventory.html', context_dict)
+
+@login_required
+def addinvtentory(request):
+    if request.POST:
+        product = Product()
+        product.name = request.POST['name']
+        product.price = request.POST['price']
+        product.medium = request.POST['medium']
+        product.description = request.POST['description']
+        # picture = request.POST['image_upload']
+        product.save()
+    return render(request, 'pdxart/addinventory.html')
