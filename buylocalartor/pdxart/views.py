@@ -17,7 +17,7 @@ def index(request):
     return render(request, 'pdxart/index.html', context_dict)
 
 
-# Initial log in page --------------------------------------------------------------------------------------------------------------------
+# Initial registration page --------------------------------------------------------------------------------------------------------------------
 def registration(request):
     if request.POST:
         email = request.POST['email']
@@ -139,13 +139,17 @@ def inventory(request):
     # Go render the response and return it to the client.
     return render(request, 'pdxart/inventory.html', context_dict)
 
+
+# WHen you want to add a new item to your inventory--------------------------------------------------------------------------------------------------
 @login_required
-def addinvtentory(request):
+def addinventory(request):
     if request.POST:
+        print request.POST
         product = Product()
-        product.name = request.POST['name']
+        product.owner = request.user
+        product.name = request.POST['itemname']
         product.price = request.POST['price']
-        product.medium = request.POST['medium']
+        product.medium = Medium.object.get(material=request.POST['medium'])
         product.description = request.POST['description']
         # picture = request.POST['image_upload']
         product.save()

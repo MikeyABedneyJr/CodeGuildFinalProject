@@ -5,7 +5,30 @@
     <title></title>
 </head>
 <body>
+    <fieldset>
+        <legend>
+            Add a new item
+        </legend>
+    <div id="newitem_box">
+      <form method="POST" id="newitem">
+        <div id="errors" style="color: red;"></div>
 
+{#          TODO: Loop through all medium options to make textboxes#}
+        Medium = <select value="" name="medium">
+          <option>Encaustic</option>
+          <option>Wood</option>
+            </select>
+          <br>
+{% csrf_token %}
+        Item name:<input value="" name="itemname" id="name"><br>
+        Price: $<input type="number" name="price" min="1"><br><br>
+        Description (500 words or less): <br><textarea style="width: 300px; height: 100px" name="description" type="text"></textarea><br>
+{#          TODO: Show how many characters are currently in box (of 500)#}
+{#        Profile Picture: <img src="{{ item.avatar_image_url }}" alt="profile pic"/><br>#}
+       <br>
+      <input type="submit" value="Post Item">
+    </div></form>
+    </fieldset>
 
     <br><br>
     <a href="/pdxart/">Back to homepage</a><br>

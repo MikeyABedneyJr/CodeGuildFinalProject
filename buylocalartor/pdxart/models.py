@@ -9,15 +9,19 @@ class Medium(models.Model):
         verbose_name_plural = "Media"
 
     material = models.CharField(max_length=128, unique=True)
+
     def __unicode__(self):
         return str(self.material)
+
 
 class Address(models.Model):
     state = models.CharField(max_length=128, default='Oregon')
     street_address = models.CharField(max_length=128, blank=True)
     city = models.CharField(max_length=128, blank=True)
+
     def __unicode__(self):
         return str(self.street_address)
+
 
 class Profilepic(models.Model):
     avatar = models.ImageField(upload_to='/media/profile_images')
@@ -25,6 +29,7 @@ class Profilepic(models.Model):
                                       processors=[ResizeToFill(100, 50)],
                                       format='PNG',
                                       options={'quality': 60})
+
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User)
@@ -41,6 +46,7 @@ class UserProfile(models.Model):
     #         return ('/media/profile_images/' + self + '.png')
     #     else:
     #         return ('/media/profile_images/default_profile_pic.jpg'')
+
     def __unicode__(self):
         return str(self.user.username)
 
@@ -48,12 +54,13 @@ class UserProfile(models.Model):
 class Product(models.Model):
     name = models.CharField(max_length=128)
     price = models.PositiveIntegerField(default=0)
-    medium = models.ForeignKey(Medium)
-    owner = models.ForeignKey(UserProfile)
+    medium = models.ForeignKey(Medium, null=True)
+    owner = models.ForeignKey(User)
     views = models.PositiveIntegerField(default=0)
     likes = models.PositiveIntegerField(default=0)
     description = models.TextField(max_length=500)
     time_sold = models.DateTimeField(blank=True, null=True)
     updated = models.DateTimeField(null=True)
+
     def __unicode__(self):  #For Python 2, use __str__ on Python 3
         return str(self.name)
