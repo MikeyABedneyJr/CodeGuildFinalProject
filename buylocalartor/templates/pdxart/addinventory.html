@@ -15,8 +15,9 @@
 
 {#          TODO: Loop through all medium options to make textboxes#}
         Medium = <select value="" name="medium">
-          <option>Encaustic</option>
-          <option>Wood</option>
+          {%  for j in media %}
+          <option value="{{ j.name }}">{{ j.name }}</option>
+          {% endfor %}
             </select>
           <br>
 {% csrf_token %}

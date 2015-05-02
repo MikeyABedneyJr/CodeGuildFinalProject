@@ -5,7 +5,7 @@
     <title>Inventory</title>
 </head>
 <body>
-<a href="pdxart/addinventory/">Click here</a> if you'd like to post a new item<br><br>
+<a href="{% url 'addinventory' %}">Click here</a> if you'd like to post a new item<br><br>
     {% if products %}
         <h1>Here are the items you currently have listed</h1>
         <ul>

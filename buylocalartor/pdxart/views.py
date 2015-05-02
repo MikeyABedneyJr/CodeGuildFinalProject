@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from pdxart.models import Product, User, UserProfile
+from pdxart.models import Product, User, UserProfile, Medium
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
@@ -17,7 +17,7 @@ def index(request):
     return render(request, 'pdxart/index.html', context_dict)
 
 
-# Initial registration page --------------------------------------------------------------------------------------------------------------------
+# Initial registration page -------------------------------------------------------------------------------------
 def registration(request):
     if request.POST:
         email = request.POST['email']
@@ -143,14 +143,21 @@ def inventory(request):
 # WHen you want to add a new item to your inventory--------------------------------------------------------------------------------------------------
 @login_required
 def addinventory(request):
+    media_list = Medium.objects.all()
+    media = []
+    for i in media_list:
+        media.append({'name': i.material})
+    context_dict = {'media': media}
     if request.POST:
-        print request.POST
+        # print request.POST
         product = Product()
         product.owner = request.user
         product.name = request.POST['itemname']
         product.price = request.POST['price']
-        product.medium = Medium.object.get(material=request.POST['medium'])
+
+        product.medium = Medium.objects.get(material=request.POST['medium'])
+
         product.description = request.POST['description']
         # picture = request.POST['image_upload']
         product.save()
-    return render(request, 'pdxart/addinventory.html')
+    return render(request, 'pdxart/addinventory.html', context_dict)
