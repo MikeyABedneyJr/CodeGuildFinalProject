@@ -41,6 +41,7 @@ class UserProfile(models.Model):
     bio = models.TextField(max_length=500, blank=True, null=True)
     address = models.OneToOneField(Address, blank=True, null=True)
     gender = models.CharField(max_length=1, blank=True)
+    picture = models.ImageField(upload_to='/media/profile_images', blank=True)
     # def avatar_image(self):
     #     if has image:
     #         return ('/media/profile_images/' + self + '.png')

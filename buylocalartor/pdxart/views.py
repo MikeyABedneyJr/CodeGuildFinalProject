@@ -13,7 +13,6 @@ def index(request):
     category_list = Product.objects.order_by('-likes')[:5]
     context_dict = {'products': category_list}
 
-    # Render the response and send it back!
     return render(request, 'pdxart/index.html', context_dict)
 
 
@@ -21,17 +20,16 @@ def index(request):
 def registration(request):
     if request.POST:
         email = request.POST['email']
-        username = request.POST['email'] # Only logging in /w email
+        username = request.POST['email']
         password = request.POST['password']
-        # firstname = request.POST['firstname']
-        # lastname = request.POST['lastname']
-        # picture = request.POST['image_upload']
         user = User.objects.create_user(username=username, password=password, email=email)
         user.save()
         profile = UserProfile()
         u = User.objects.get(username=username)
+        profile.picture = request.FILES['profilepic']
+        # TODO: Profile pic file needs name change to work properly ---1st run
         profile.user = u
-        # profile.picture = picture #TODO: Fix profile pic--prob not gonna work
+        # profile.picture = picture
         # profile.date = request.POST['dob']
             # TODO: How to verify address in Oregon?
         profile.save()
@@ -97,6 +95,7 @@ def user_logout(request):
     return HttpResponseRedirect('/pdxart/')
 
 # Stored profile --------------------------------------------------------------------------------------------------------------------
+
 @login_required
 def profile(request):
     p = UserProfile.objects.get(user = request.user)
@@ -106,6 +105,7 @@ def profile(request):
 
 
 # Updating log in page --------------------------------------------------------------------------------------------------------------------
+
 @login_required
 def update_profile(request):
     user = User.objects.get(username=request.user)
@@ -116,7 +116,6 @@ def update_profile(request):
         user.firstname = request.POST.get('firstname')
         user.lastname = request.POST.get('lastname')
         user.save()
-
         profile.address = request.POST['address']
         profile.linkedin = request.POST.get('linkedin')
         profile.twitter = request.POST.get('twitter')
@@ -149,15 +148,13 @@ def addinventory(request):
         media.append({'name': i.material})
     context_dict = {'media': media}
     if request.POST:
-        # print request.POST
         product = Product()
         product.owner = request.user
         product.name = request.POST['itemname']
         product.price = request.POST['price']
-
         product.medium = Medium.objects.get(material=request.POST['medium'])
-
         product.description = request.POST['description']
         # picture = request.POST['image_upload']
         product.save()
+        return HttpResponseRedirect('/pdxart/')
     return render(request, 'pdxart/addinventory.html', context_dict)

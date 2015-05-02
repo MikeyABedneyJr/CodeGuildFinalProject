@@ -13,7 +13,6 @@
       <form method="POST" id="newitem">
         <div id="errors" style="color: red;"></div>
 
-{#          TODO: Loop through all medium options to make textboxes#}
         Medium = <select value="" name="medium">
           {%  for j in media %}
           <option value="{{ j.name }}">{{ j.name }}</option>
@@ -28,7 +27,7 @@
 {#        Profile Picture: <img src="{{ item.avatar_image_url }}" alt="profile pic"/><br>#}
        <br>
       <input type="submit" value="Post Item">
-    </div></form>
+    </form></div>
     </fieldset>
 
     <br><br>
