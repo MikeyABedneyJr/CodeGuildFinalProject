@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 
 
+
 def index(request):
     # Query the database for a list of ALL products currently stored.
     # Order the products by no. likes in descending order.
@@ -18,6 +19,11 @@ def index(request):
 
 # Initial registration page -------------------------------------------------------------------------------------
 def registration(request):
+    # def handle_uploaded_file(f):
+    #     with open('temppic.text', 'wb+') as destination:
+    #         for chunk in f.chunks():
+    #             destination.write(chunk)
+
     if request.POST:
         email = request.POST['email']
         username = request.POST['email']
@@ -27,7 +33,8 @@ def registration(request):
         profile = UserProfile()
         u = User.objects.get(username=username)
         profile.picture = request.FILES['profilepic']
-        # TODO: Profile pic file needs name change to work properly ---1st run
+        # profile.picture = handle_uploaded_file(request.FILES['profilepic'])
+
         profile.user = u
         # profile.picture = picture
         # profile.date = request.POST['dob']

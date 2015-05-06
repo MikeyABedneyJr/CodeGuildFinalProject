@@ -10,7 +10,7 @@
             Create an account
         </legend>
     <div id="login_box">
-      <form method="POST" id="registration">
+      <form method="POST" id="registration" enctype="multipart/form-data">
         <div id="errors" style="color: red;"></div>
 
 
@@ -22,7 +22,7 @@
         Email: <input type="email" name="email" id="email"><br>
         Password: <input type="password" name="password" id="password"><br>
 {#        Verify password: <input type="password" name="verify_password" id="verify_password"><br>#}
-        Profile picture: <input type="file" name="profilepic" id="profilepic"><br>
+        Profile picture: <input type="file" name="profilepic" id="profilepic" multiple><br>
         Date of birth: <input type="date" name="dob" id="dob"><br>
 {#        Gender = <select value="">#}
 {#          <option>Female</option>#}
