@@ -6,23 +6,43 @@
 </head>
 <body>
 {# TODO: Create an id, go to update it, have the fields prepopulated#}
-<fieldset>
-    <legend>Your Profile</legend>
-      <form method="POST" id="update">
-      {% csrf_token %}
-        First Name:<input value="" name="firstname" id="firstname"><br>
-        Last Name:<input value="" name="lastname" id="lastname"><br>
-        Business name: <input value="" name="username" id="username"><br>
+
+{% block content %}
+    <div id="body">
+    <P ALIGN=Center><h2>Update your profile</h2></P ALIGN=Center>
+
+        </div>
+<div class="value"
+    <input value="{{ profile.email }}"/>Email<br>
+    <input value="{{ profile.firstname }}"/><br>
+    <input value="{{ profile.lastname }}"/><br>
+    <input value="{{ profile.password }}"/><br>
+    <input value="{{ profile.website }}"/><br>
+    <input value="{{ profile.facebook }}"/><br>
+    <input value="{{ profile.twitter }}"/><br>
+    <input value="{{ profile.linkedin }}"/><br>
+{#    <input value="{{ profile.dob }}"/><br>#}
+    <input value="{{ profile.bio }}"/><br>
+</div>
+
+{% endblock %}
+{#<fieldset>#}
+{#    <legend>Edit Your Profile</legend>#}
+{#      <form role="form" method="POST" id="update" action=".">#}
+{#      {% csrf_token %}#}
+{#        First Name:<input value="" name="firstname" id="firstname"><br>#}
+{#        Last Name:<input value="" name="lastname" id="lastname"><br>#}
+{#        Business name: <input value="" name="profilename" id="profilename"><br>#}
 {#        Profile Picture: <img src="{{ item.avatar_image_url }}" alt="profile pic"/><br>#}
-        Password: <input type="password" name="password" id="password"><br>
-        Email: <input type="email" name="email" id="email"><br>
-        Website: <input type="" name="website" id="website"><br>
-        Facebook: <input type="" name="facebook" id="facebook"><br>
-        Twitter: <input type="" name="twitter" id="twitter"><br>
-        LinkedIn: <input type="" name="linkedin" id="linkedin"><br>
-        Why do you like art?: <input type="" name="bio" id="bio"><br>
-      <input type="submit" value="Register">
-    </form>
-    </fieldset>
+{#        Password: <input type="password" name="password" id="password"><br>#}
+{#        Email: <input type="email" name="email" id="email"><br>#}
+{#        Website: <input type="" name="website" id="website"><br>#}
+{#        Facebook: <input type="" name="facebook" id="facebook"><br>#}
+{#        Twitter: <input type="" name="twitter" id="twitter"><br>#}
+{#        LinkedIn: <input type="" name="linkedin" id="linkedin"><br>#}
+{#        Why do you like art?: <input type="" name="bio" id="bio"><br>#}
+{#      <input type="submit" value="Update">#}
+{#    </form>#}
+{#    </fieldset>#}
 </body>
 </html>

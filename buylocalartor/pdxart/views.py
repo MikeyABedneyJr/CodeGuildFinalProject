@@ -110,26 +110,48 @@ def profile(request):
 
 
 # Updating log in page --------------------------------------------------------------------------------------------------------------------
-
+# TODO: Create user profile in admin page---THEN test this code
 @login_required
 def update_profile(request):
-    user = User.objects.get(username=request.user)
     profile = UserProfile.objects.filter(user=request.user)[0]
-    # TODO: Make dictionary with user info (keyword pairs) and move into fields
     if request.POST:
-        user.email = request.POST.get('email')
-        user.firstname = request.POST.get('firstname')
-        user.lastname = request.POST.get('lastname')
-        user.save()
+        profile = UserProfile()
+        profile.user = request.user
+        profile.email = request.POST['email']
+        profile.firstname = request.POST['firstname']
+        profile.lastname = request.POST['lastname']
         profile.address = request.POST['address']
-        profile.linkedin = request.POST.get('linkedin')
-        profile.twitter = request.POST.get('twitter')
-        profile.facebook = request.POST.get('facebook')
-        # profile.date = request.POST['dob']
-        profile.bio = request.POST.get('bio')
+        profile.linkedin = request.POST['linkedin']
+        profile.twitter = request.POST['twitter']
+        profile.facebook = request.POST['facebook']
+        profile.dob = request.POST['dob']
+        profile.bio = request.POST['bio']
         profile.save()
         return HttpResponseRedirect('/pdxart/')
-    return render(request, 'pdxart/updateprofile.html', {'email': user, 'profile': profile})
+    return render(request, 'pdxart/updateprofile.html', {'email': request.user, "profile": profile})
+
+    # user = User.objects.get(username=request.user)
+    # user = request.user
+    # print user
+    #
+    # profile_list = UserProfile.objects.filter(user=request.user)
+    # print len(profile_list)
+    # print profile_list
+    # if request.POST:
+    #     user.email = request.POST.get('email')
+    #     user.firstname = request.POST.get('firstname')
+    #     user.lastname = request.POST.get('lastname')
+    #     user.save()
+    #     profile.address = request.POST['address']
+    #     profile.linkedin = request.POST.get('linkedin')
+    #     profile.twitter = request.POST.get('twitter')
+    #     profile.facebook = request.POST.get('facebook')
+    #     # profile.date = request.POST['dob']
+    #     profile.bio = request.POST.get('bio')
+    #     profile.save()
+    #     return HttpResponseRedirect('/pdxart/')
+    #
+    # return render(request, 'pdxart/updateprofile.html', {'email': user, 'profile': profile})
 
 
 # Viewing personal inventory page --------------------------------------------------------------------------------------------------------------------
