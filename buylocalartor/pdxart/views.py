@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 
 
+# Main landing page -------------------------------------------------------------------------------------
 
 def index(request):
     # Query the database for a list of ALL products currently stored.
@@ -18,11 +19,8 @@ def index(request):
 
 
 # Initial registration page -------------------------------------------------------------------------------------
+
 def registration(request):
-    # def handle_uploaded_file(f):
-    #     with open('temppic.text', 'wb+') as destination:
-    #         for chunk in f.chunks():
-    #             destination.write(chunk)
 
     if request.POST:
         email = request.POST['email']
@@ -30,24 +28,24 @@ def registration(request):
         password = request.POST['password']
         user = User.objects.create_user(username=username, password=password, email=email)
         user.save()
+
         profile = UserProfile()
-        u = User.objects.get(username=username)
-        profile.picture = request.FILES['profilepic']
-        # profile.picture = handle_uploaded_file(request.FILES['profilepic'])
-
-        profile.user = u
-        # profile.picture = picture
+        # u = User.objects.get(username=username)
+        profile.picture = request.FILES['image_upload']
+        # profile.user = u
         # profile.date = request.POST['dob']
-            # TODO: How to verify address in Oregon?
+        # TODO: How to verify address in Oregon?
+
         profile.save()
-        new_member = authenticate(username=username, password=password)
+        return redirect('/pdxart/')
+        # new_member = authenticate(username=username, password=password)
+        #
+        # if new_member:
+        #     login(request, new_member)
+        #     return HttpResponseRedirect('/pdxart/')
+        # return HttpResponseRedirect('/pdxart/')
 
-
-        if new_member:
-            login(request, new_member)
-            return HttpResponseRedirect('/pdxart/')
-        return HttpResponseRedirect('/pdxart/')
-    return render(request, 'pdxart/registration.html')
+    return render(request, 'pdxart/registration.html') #, context_dict)
 
 
 def user_login(request):
@@ -91,7 +89,7 @@ def user_login(request):
         return render(request, 'pdxart/login.html', {})
 
 
-# Logging out --------------------------------------------------------------------------------------------------------------------
+# Logging out -----------------------------------------------------------------------------------------------------
 
 @login_required
 def user_logout(request):
@@ -101,7 +99,7 @@ def user_logout(request):
     # Take the user back to the homepage.
     return HttpResponseRedirect('/pdxart/')
 
-# Stored profile --------------------------------------------------------------------------------------------------------------------
+# Stored profile -------------------------------------------------------------------------------------------------------
 
 @login_required
 def profile(request):
