@@ -12,17 +12,17 @@
     <P ALIGN=Center><h2>Update your profile</h2></P ALIGN=Center>
 
         </div>
-<div class="value"
-    <input value="{{ profile.email }}"/>Email<br>
-    <input value="{{ profile.firstname }}"/><br>
-    <input value="{{ profile.lastname }}"/><br>
-    <input value="{{ profile.password }}"/><br>
-    <input value="{{ profile.website }}"/><br>
-    <input value="{{ profile.facebook }}"/><br>
-    <input value="{{ profile.twitter }}"/><br>
-    <input value="{{ profile.linkedin }}"/><br>
+<div class="value">
+    Email: <input value="{{ profile.email }}"/>Email<br>
+    First name: <input value="{{ profile.firstname }}"/><br>
+    Last name: <input value="{{ profile.lastname }}"/><br>
+{#    Password: <input value="{{ profile.password }}"/><br>#}
+    Website: <input value="{{ profile.website }}"/><br>
+    Facebook page: <input value="{{ profile.facebook }}"/><br>
+    Twitter: <input value="{{ profile.twitter }}"/><br>
+    LinkedIn: <input value="{{ profile.linkedin }}"/><br>
 {#    <input value="{{ profile.dob }}"/><br>#}
-    <input value="{{ profile.bio }}"/><br>
+    A little about you (500 word limit): <input value="{{ profile.bio }}"/><br>
 </div>
 
 {% endblock %}

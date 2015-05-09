@@ -41,8 +41,9 @@ class UserProfile(models.Model):
     linkedin = models.URLField(blank=True, null=True)
     bio = models.TextField(max_length=500, blank=True, null=True)
     address = models.OneToOneField(Address, blank=True, null=True)
-    # gender = models.CharField(max_length=1, blank=True)
-    picture = models.ImageField(upload_to='/media/profile_images', blank=True)
+    gender = models.CharField(max_length=1, blank=True)
+    #TODO: Add Date of birth
+    picture = models.ImageField(upload_to='media/profile_images', blank=True)
 
     # avatar = models.OneToOneField(Profilepic, blank=True, null=True)
 

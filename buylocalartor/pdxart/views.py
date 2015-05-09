@@ -19,33 +19,22 @@ def index(request):
 
 
 # Initial registration page -------------------------------------------------------------------------------------
-
 def registration(request):
-
     if request.POST:
         email = request.POST['email']
         username = request.POST['email']
         password = request.POST['password']
         user = User.objects.create_user(username=username, password=password, email=email)
         user.save()
-
         profile = UserProfile()
-        # u = User.objects.get(username=username)
+        profile.user = user
         profile.picture = request.FILES['image_upload']
-        # profile.user = u
         # profile.date = request.POST['dob']
         # TODO: How to verify address in Oregon?
-
         profile.save()
-        return redirect('/pdxart/')
-        # new_member = authenticate(username=username, password=password)
-        #
-        # if new_member:
-        #     login(request, new_member)
-        #     return HttpResponseRedirect('/pdxart/')
-        # return HttpResponseRedirect('/pdxart/')
+        return HttpResponseRedirect('/pdxart/')
 
-    return render(request, 'pdxart/registration.html') #, context_dict)
+    return render(request, 'pdxart/registration.html')
 
 
 def user_login(request):
@@ -89,28 +78,24 @@ def user_login(request):
         return render(request, 'pdxart/login.html', {})
 
 
-# Logging out -----------------------------------------------------------------------------------------------------
-
+# Logging out ----------------------------------------------------------------------------------------------------------
 @login_required
 def user_logout(request):
     # Since we know the user is logged in, we can now just log them out.
     logout(request)
-
     # Take the user back to the homepage.
     return HttpResponseRedirect('/pdxart/')
 
-# Stored profile -------------------------------------------------------------------------------------------------------
 
+# Stored profile -------------------------------------------------------------------------------------------------------
 @login_required
 def profile(request):
-    p = UserProfile.objects.get(user = request.user)
+    p = UserProfile.objects.get(user=request.user)
     context_dict = {'profile': p}
     return render(request, 'pdxart/profile.html', context_dict)
 
 
-
-# Updating log in page --------------------------------------------------------------------------------------------------------------------
-# TODO: Create user profile in admin page---THEN test this code
+# Updating log in page -------------------------------------------------------------------------------------------------
 @login_required
 def update_profile(request):
     profile = UserProfile.objects.filter(user=request.user)[0]
@@ -130,43 +115,18 @@ def update_profile(request):
         return HttpResponseRedirect('/pdxart/')
     return render(request, 'pdxart/updateprofile.html', {'email': request.user, "profile": profile})
 
-    # user = User.objects.get(username=request.user)
-    # user = request.user
-    # print user
-    #
-    # profile_list = UserProfile.objects.filter(user=request.user)
-    # print len(profile_list)
-    # print profile_list
-    # if request.POST:
-    #     user.email = request.POST.get('email')
-    #     user.firstname = request.POST.get('firstname')
-    #     user.lastname = request.POST.get('lastname')
-    #     user.save()
-    #     profile.address = request.POST['address']
-    #     profile.linkedin = request.POST.get('linkedin')
-    #     profile.twitter = request.POST.get('twitter')
-    #     profile.facebook = request.POST.get('facebook')
-    #     # profile.date = request.POST['dob']
-    #     profile.bio = request.POST.get('bio')
-    #     profile.save()
-    #     return HttpResponseRedirect('/pdxart/')
-    #
-    # return render(request, 'pdxart/updateprofile.html', {'email': user, 'profile': profile})
 
-
-# Viewing personal inventory page --------------------------------------------------------------------------------------------------------------------
+# Viewing personal inventory page --------------------------------------------------------------------------------------
 @login_required
 def inventory(request):
     # Create a context dictionary which we can pass to the template rendering engine.
-
     products = Product.objects.all()
     context_dict = {'products': products}
-
     # Go render the response and return it to the client.
     return render(request, 'pdxart/inventory.html', context_dict)
 
 
-# WHen you want to add a new item to your inventory--------------------------------------------------------------------------------------------------
+# WHen you want to add a new item to your inventory---------------------------------------------------------------------
 @login_required
 def addinventory(request):
     media_list = Medium.objects.all()
@@ -181,6 +141,7 @@ def addinventory(request):
         product.price = request.POST['price']
         product.medium = Medium.objects.get(material=request.POST['medium'])
         product.description = request.POST['description']
+        # TODO: Add image for item--->See update profile view
         # picture = request.POST['image_upload']
         product.save()
         return HttpResponseRedirect('/pdxart/')
