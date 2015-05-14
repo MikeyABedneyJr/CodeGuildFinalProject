@@ -34,7 +34,6 @@ class Profilepic(models.Model):
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User)
-
     website = models.URLField(blank=True, null=True)
     facebook = models.URLField(blank=True, null=True)
     twitter = models.URLField(blank=True, null=True)
@@ -46,7 +45,6 @@ class UserProfile(models.Model):
     picture = models.ImageField(upload_to='media/profile_images', blank=True)
 
     # avatar = models.OneToOneField(Profilepic, blank=True, null=True)
-
     # def avatar_image(self):
     #     if has image:
     #         return ('/media/profile_images/' + self + '.png')

@@ -13,25 +13,13 @@
       <form role="form" method="POST" action="." id="registration" enctype="multipart/form-data">
         <div id="errors" style="color: red;"></div>
 
-
 {% csrf_token %}
-{#        First Name:<input value="" name="firstname" id="firstname"><br>#}
-{#        Last Name:<input value="" name="lastname" id="lastname"><br>#}
-{#        Username: <input value="" name="username" id="username"><br>#}
-{#        Profile Picture: <img src="{{ item.avatar_image_url }}" alt="profile pic"/><br>#}
         Email: <input type="email" name="email" id="email"><br>
         Password: <input type="password" name="password" id="password"><br>
-{#        Verify password: <input type="password" name="verify_password" id="verify_password"><br>#}
         Profile picture: <input type="file" name="image_upload" multiple><br>
         Date of birth: <input type="date" name="dob" id="dob"><br>
-{#        Gender = <select value="">#}
-{#          <option>Female</option>#}
-{#          <option>Male</option>#}
-{#          <option>Transgendered</option>#}
-{#          <option>Prefer not to answer</option></select><br>#}
 
     <p>
-
 
         How did you hear about us?
         <select size="1">
