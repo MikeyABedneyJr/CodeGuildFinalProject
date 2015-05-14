@@ -5,8 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 
 
-# Main landing page -------------------------------------------------------------------------------------
-
+# Main landing page ----------------------------------------------------------------------------------------------------
 def index(request):
     # Query the database for a list of ALL products currently stored.
     # Order the products by no. likes in descending order.
@@ -18,7 +17,7 @@ def index(request):
     return render(request, 'pdxart/index.html', context_dict)
 
 
-# Initial registration page -------------------------------------------------------------------------------------
+# Initial registration page --------------------------------------------------------------------------------------------
 def registration(request):
     if request.POST:
         email = request.POST['email']
@@ -28,53 +27,36 @@ def registration(request):
         user.save()
         profile = UserProfile()
         profile.user = user
-        profile.picture = request.FILES['image_upload']
-        # profile.date = request.POST['dob']
+        try:
+            profile.picture = request.FILES['image_upload']
+        except:
+            pass
+        profile.dob = request.POST['dob']
         # TODO: How to verify address in Oregon?
         profile.save()
         return HttpResponseRedirect('/pdxart/')
 
     return render(request, 'pdxart/registration.html')
 
-
+# Quick log in ---------------------------------------------------------------------------------------------------------
 def user_login(request):
-    # If the request is a HTTP POST, try to pull out the relevant information.
     if request.method == 'POST':
-        # Gather the username and password provided by the user.
-        # This information is obtained from the login form.
-                # We use request.POST.get('<variable>') as opposed to request.POST['<variable>'],
-                # because the request.POST.get('<variable>') returns None, if the value does not exist,
-                # while the request.POST['<variable>'] will raise key error exception
         username = request.POST.get('email')
         password = request.POST.get('password')
-
-        # Use Django's machinery to attempt to see if the username/password
-        # combination is valid - a User object is returned if it is.
         user = authenticate(username=username, password=password)
 
-        # If we have a User object, the details are correct.
-        # If None (Python's way of representing the absence of a value), no user
-        # with matching credentials was found.
         if user:
-            # Is the account active? It could have been disabled.
             if user.is_active:
-                # If the account is valid and active, we can log the user in.
-                # We'll send the user back to the homepage.
                 login(request, user)
                 return HttpResponseRedirect('/pdxart/')
             else:
-                # An inactive account was used - no logging in!
                 return HttpResponse("Your account has been disabled.")
         else:
-            # Bad login details were provided. So we can't log the user in.
+
             print "Invalid login details: {0}, {1}".format(username, password)
             return HttpResponse("Invalid login details supplied.")
 
-    # The request is not a HTTP POST, so display the login form.
-    # This scenario would most likely be a HTTP GET.
     else:
-        # No context variables to pass to the template system, hence the
-        # blank dictionary object...
         return render(request, 'pdxart/login.html', {})
 
 
@@ -141,8 +123,8 @@ def addinventory(request):
         product.price = request.POST['price']
         product.medium = Medium.objects.get(material=request.POST['medium'])
         product.description = request.POST['description']
-        # TODO: Add image for item--->See update profile view
-        # picture = request.POST['image_upload']
+        product.picture = request.FILES['item_image_upload']
         product.save()
         return HttpResponseRedirect('/pdxart/')
     return render(request, 'pdxart/addinventory.html', context_dict)
+

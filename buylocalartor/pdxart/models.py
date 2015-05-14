@@ -41,7 +41,7 @@ class UserProfile(models.Model):
     bio = models.TextField(max_length=500, blank=True, null=True)
     address = models.OneToOneField(Address, blank=True, null=True)
     gender = models.CharField(max_length=1, blank=True)
-    #TODO: Add Date of birth
+    dob = models.DateField(blank=True, null=True)
     picture = models.ImageField(upload_to='media/profile_images', blank=True)
 
     # avatar = models.OneToOneField(Profilepic, blank=True, null=True)
@@ -65,6 +65,6 @@ class Product(models.Model):
     description = models.TextField(max_length=500)
     time_sold = models.DateTimeField(blank=True, null=True)
     updated = models.DateTimeField(null=True)
-
+    picture = models.ImageField(upload_to='media/product_images', blank=True)
     def __unicode__(self):  #For Python 2, use __str__ on Python 3
         return str(self.name)
