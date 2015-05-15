@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b424081-e4a7-47fa-a0f5-df38bd7e4b8f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/images/logo.png" />
       <change type="DELETED" beforePath="C:\Users\mike.bedney\Desktop\Dropbox\GitHub\CodeGuildFinalProject\.idea\.name" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\mike.bedney\Desktop\Dropbox\GitHub\CodeGuildFinalProject\.idea\CodeGuildFinalProject.iml" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\mike.bedney\Desktop\Dropbox\GitHub\CodeGuildFinalProject\.idea\encodings.xml" afterPath="" />
@@ -12,11 +11,7 @@
       <change type="DELETED" beforePath="C:\Users\mike.bedney\Desktop\Dropbox\GitHub\CodeGuildFinalProject\.idea\vcs.xml" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\mike.bedney\Desktop\Dropbox\GitHub\CodeGuildFinalProject\.idea\workspace.xml" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\mike.bedney\Desktop\Dropbox\GitHub\CodeGuildFinalProject\models.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/pdxart/base.html" afterPath="$PROJECT_DIR$/templates/pdxart/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pdxart/models.py" afterPath="$PROJECT_DIR$/pdxart/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/standard.css" afterPath="$PROJECT_DIR$/static/css/standard.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/pdxart/updateprofile.html" afterPath="$PROJECT_DIR$/templates/pdxart/updateprofile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pdxart/views.py" afterPath="$PROJECT_DIR$/pdxart/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/pdxart/index.html" afterPath="$PROJECT_DIR$/templates/pdxart/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="buylocalartor.iws" />
@@ -57,16 +52,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="updateprofile.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/pdxart/updateprofile.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="697">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="registration.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/pdxart/registration.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -77,11 +62,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/pdxart/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.058020476" vertical-offset="0" max-vertical-offset="391">
+              <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/pdxart/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20714286" vertical-offset="112" max-vertical-offset="527">
-              <caret line="10" column="99" selection-start-line="10" selection-start-column="99" selection-end-line="10" selection-end-column="123" />
+            <state vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="527">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -92,16 +87,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
               <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pdxart/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1781" max-vertical-offset="2159">
-              <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -125,7 +110,6 @@
         <option value="$PROJECT_DIR$/pdxart/forms.py" />
         <option value="$PROJECT_DIR$/pdxart/urls.py" />
         <option value="$PROJECT_DIR$/data.json" />
-        <option value="$PROJECT_DIR$/templates/pdxart/index.html" />
         <option value="$PROJECT_DIR$/templates/pdxart/inventory.html" />
         <option value="$PROJECT_DIR$/pdxart/admin.py" />
         <option value="$PROJECT_DIR$/buylocalartor/settings.py" />
@@ -134,8 +118,9 @@
         <option value="$PROJECT_DIR$/pdxart/views.py" />
         <option value="$PROJECT_DIR$/pdxart/models.py" />
         <option value="$PROJECT_DIR$/templates/pdxart/updateprofile.html" />
-        <option value="$PROJECT_DIR$/templates/pdxart/base.html" />
         <option value="$PROJECT_DIR$/static/css/standard.css" />
+        <option value="$PROJECT_DIR$/templates/pdxart/base.html" />
+        <option value="$PROJECT_DIR$/templates/pdxart/index.html" />
       </list>
     </option>
   </component>
@@ -812,7 +797,13 @@
       <option name="project" value="LOCAL" />
       <updated>1431570766469</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Tonight's goal: Make everything look pretty">
+      <created>1431654787626</created>
+      <option name="number" value="00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1431654787627</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -840,19 +831,19 @@
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32564843" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30121952" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24821003" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32458234" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2605459" sideWeight="0.21037464" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32738096" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32754344" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32506204" sideWeight="0.78962535" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30121952" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32738096" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32754344" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24063401" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32458234" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -878,7 +869,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Everything works---going to focus on the base.html page" />
     <MESSAGE value="Workin on base.html" />
     <MESSAGE value="First evening push" />
     <MESSAGE value="Last push -- added many TODOs for user authentication" />
@@ -903,7 +893,8 @@
     <MESSAGE value="                 PROFILE IMAGES WORKS!!!WOOO" />
     <MESSAGE value="Cleaned up models and some views from commented out code" />
     <MESSAGE value="Cleaned up more code, about to add immediate log in from registration or rename image at upload" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up more code, about to add immediate log in from registration or rename image at upload" />
+    <MESSAGE value="Tonight's goal: Make everything look pretty" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tonight's goal: Make everything look pretty" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1210,13 +1201,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/pdxart/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2922636" vertical-offset="0" max-vertical-offset="391">
-          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python27/Lib/site-packages/django/contrib/admin/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
@@ -1250,9 +1234,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pdxart/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1781" max-vertical-offset="2159">
+          <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/pdxart/updateprofile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="697">
+        <state vertical-scroll-proportion="0.7285714" vertical-offset="0" max-vertical-offset="697">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
@@ -1266,10 +1258,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pdxart/views.py">
+    <entry file="file://$PROJECT_DIR$/templates/pdxart/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1781" max-vertical-offset="2159">
-          <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+        <state vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="527">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -1282,10 +1274,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/pdxart/base.html">
+    <entry file="file://$PROJECT_DIR$/templates/pdxart/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20714286" vertical-offset="112" max-vertical-offset="527">
-          <caret line="10" column="99" selection-start-line="10" selection-start-column="99" selection-end-line="10" selection-end-column="123" />
+        <state vertical-scroll-proportion="0.058020476" vertical-offset="0" max-vertical-offset="391">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
           <folding />
         </state>
       </provider>
