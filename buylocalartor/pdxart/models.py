@@ -44,6 +44,8 @@ class UserProfile(models.Model):
     dob = models.DateField(blank=True, null=True)
     picture = models.ImageField(upload_to='media/profile_images', blank=True)
 
+
+
     # avatar = models.OneToOneField(Profilepic, blank=True, null=True)
     # def avatar_image(self):
     #     if has image:
