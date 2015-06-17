@@ -1,4 +1,4 @@
-# Buy Local OR  (buy local art)
+# Buy Local OR  (buy local Oregon)
 
 This is an ongoing project which began as a final project as part of the PDX Code Guild bootcamp that ended May 18th, 2015.
 The goal is to create an ecommerce site for Oregon-based artists to be seen/discovered/supported by members of their community.
