@@ -10,4 +10,5 @@ urlpatterns = patterns('',
         url(r'^logout/$', views.user_logout, name='logout'),
         url(r'^inventory/$', views.inventory, name='inventory'),
         url(r'^addinventory/$', views.addinventory, name='addinventory'),
+        url(r'^index_new/', views.index_new, name='index_new'),
         )

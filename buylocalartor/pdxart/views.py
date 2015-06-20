@@ -16,6 +16,9 @@ def index(request):
 
     return render(request, 'pdxart/index.html', context_dict)
 
+# Upgrading landing page ---------------------------------------------------------------------------------------------
+def index_new(request):
+    return render(request, 'pdxart/index_new.html')
 
 # Initial registration page --------------------------------------------------------------------------------------------
 def registration(request):
