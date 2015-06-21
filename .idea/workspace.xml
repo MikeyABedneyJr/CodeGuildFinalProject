@@ -2,32 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c681eef-74b0-4973-babe-77bf16357614" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buylocalartor/static/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buylocalartor/static/images/bg_border.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buylocalartor/static/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buylocalartor/static/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buylocalartor/static/images/new.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buylocalartor/static/images/sale.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buylocalartor/static/images/searchicon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buylocalartor/static/css/animate.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buylocalartor/static/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buylocalartor/static/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buylocalartor/static/js/contact.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buylocalartor/static/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buylocalartor/static/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buylocalartor/static/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buylocalartor/static/js/gmaps.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buylocalartor/static/js/html5shiv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buylocalartor/static/js/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buylocalartor/static/js/jquery.prettyPhoto.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buylocalartor/static/js/jquery.scrollUp.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buylocalartor/static/js/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buylocalartor/static/css/prettyPhoto.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buylocalartor/static/css/price-range.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buylocalartor/static/js/price-range.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buylocalartor/static/css/responsive.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/buylocalartor/templates/pdxart/index_new.html" afterPath="$PROJECT_DIR$/buylocalartor/templates/pdxart/index_new.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/buylocalartor/static/css/main.css" afterPath="$PROJECT_DIR$/buylocalartor/static/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CodeGuildFinalProject.iws" />
@@ -93,8 +68,8 @@
       <file leaf-file-name="index_new.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/buylocalartor/templates/pdxart/index_new.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37950137">
-              <caret line="160" column="59" selection-start-line="160" selection-start-column="59" selection-end-line="160" selection-end-column="59" />
+            <state vertical-scroll-proportion="0.51800555">
+              <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -137,8 +112,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="435" />
-    <option name="y" value="11" />
+    <option name="x" value="349" />
+    <option name="y" value="12" />
     <option name="width" value="1235" />
     <option name="height" value="963" />
   </component>
@@ -547,7 +522,13 @@
       <option name="project" value="LOCAL" />
       <updated>1434844214538</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Making progress!!">
+      <created>1434846620595</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1434846620595</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -560,7 +541,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="435" y="11" width="1235" height="963" extended-state="0" />
+    <frame x="349" y="12" width="1235" height="963" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17307693" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -601,7 +582,8 @@
     <MESSAGE value="New computer---attempting init commit" />
     <MESSAGE value="Prepping for bootstrap or HTML template" />
     <MESSAGE value="Upgrading landing page--lots of work ahead" />
-    <option name="LAST_COMMIT_MESSAGE" value="Upgrading landing page--lots of work ahead" />
+    <MESSAGE value="Making progress!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Making progress!!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -726,8 +708,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/buylocalartor/templates/pdxart/index_new.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37950137">
-          <caret line="160" column="59" selection-start-line="160" selection-start-column="59" selection-end-line="160" selection-end-column="59" />
+        <state vertical-scroll-proportion="0.51800555">
+          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
           <folding />
         </state>
       </provider>
