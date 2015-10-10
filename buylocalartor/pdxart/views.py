@@ -18,7 +18,7 @@ def index(request):
 
 # Upgrading landing page ---------------------------------------------------------------------------------------------
 def index_new(request):
-    return render(request, 'pdxart/index_new.html')
+    return render(request, 'pdxart/index.html')
 
 # Initial registration page --------------------------------------------------------------------------------------------
 def registration(request):
