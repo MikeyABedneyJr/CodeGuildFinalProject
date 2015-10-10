@@ -2,7 +2,7 @@
 <hr>
 {% block content %}
     {% if user.is_authenticated %}
-        <h1>Welcome back!!</h1>
+        <h1>Welcome back!!!!</h1>
         <a href="{% url 'logout' %}">Logout</a><br>
         <a href="{% url 'updateprofile' %}">Update Profile</a><br>
         <a href="{% url 'inventory' %}">Current inventory</a><br>
